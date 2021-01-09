@@ -171,7 +171,7 @@ def clockin(access_cookies):
     print(response.text)
     requests.post(url='https://sc.ftqq.com/'+SERVERCHAN_SCKEY+'.send?text='+response.text)
     
-@retry(delay=10,tries=10)
+@retry(delay=10,tries=20)
 def main():
     token=fetch_verifyimage()
     vercode=fetch_code()
